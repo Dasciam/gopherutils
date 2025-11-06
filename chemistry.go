@@ -1,5 +1,7 @@
 package gopherutils
 
+import _ "unsafe"
+
 // RemoveChemistry removes chemistry by clearing exemptedPacks slice in
 // gopher tunnel. Intended to be particle fix.
 func RemoveChemistry() {

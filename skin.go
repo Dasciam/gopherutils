@@ -1,5 +1,7 @@
 package gopherutils
 
+import _ "unsafe"
+
 // SkinGeometry returns default skin geometry.
 // It usually contains:
 // - geometry.cape: cape model
