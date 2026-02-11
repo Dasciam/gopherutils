@@ -5,6 +5,12 @@ const (
 	MaceImplemented = Protocol1_21_0
 	// SpearImplemented is the protocol version where the Spear item was introduced (1.21.130).
 	SpearImplemented = Protocol1_21_130
+	// ClientDamageTiltConfiguringImplemented is the protocol version where the client can configure
+	// damage tilt strength in client settings (1.21.130).
+	ClientDamageTiltConfiguringImplemented = Protocol1_21_130
+	// DebugShapeEntityLinkingImplemented is the protocol version where the server can link debug shapes
+	// to entities (1.26.0).
+	DebugShapeEntityLinkingImplemented = Protocol1_26_0
 )
 
 // featureMap maps feature string IDs to their implementation protocol version.
@@ -36,17 +42,9 @@ func HasFeature(protocol, feature int32) bool {
 	return protocol >= feature
 }
 
-// HasMace returns true if the given protocol version supports the Mace item.
-func HasMace(protocol int32) bool {
-	return HasFeature(protocol, MaceImplemented)
-}
-
-// HasSpear returns true if the given protocol version supports the Spear item.
-func HasSpear(protocol int32) bool {
-	return HasFeature(protocol, SpearImplemented)
-}
-
 func init() {
 	RegisterFeature("mace_implemented", MaceImplemented)
 	RegisterFeature("spear_implemented", SpearImplemented)
+	RegisterFeature("client_damage_tilt_configuring_implemented", ClientDamageTiltConfiguringImplemented)
+	RegisterFeature("debug_shape_entity_linking_implemented", DebugShapeEntityLinkingImplemented)
 }

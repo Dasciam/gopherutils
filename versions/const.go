@@ -26,4 +26,5 @@ const (
 	Protocol1_21_120 = 859
 	Protocol1_21_124 = 860
 	Protocol1_21_130 = 898
+	Protocol1_26_0   = 924
 )
