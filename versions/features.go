@@ -11,6 +11,9 @@ const (
 	// DebugShapeEntityLinkingImplemented is the protocol version where the server can link debug shapes
 	// to entities (1.26.0).
 	DebugShapeEntityLinkingImplemented = Protocol1_26_0
+	// JWTDiscontinued is the protocol version where the old JWT authentication method has
+	// discontinued. (1.26.10)
+	JWTDiscontinued = Protocol1_26_10
 )
 
 // featureMap maps feature string IDs to their implementation protocol version.
@@ -47,4 +50,5 @@ func init() {
 	RegisterFeature("spear_implemented", SpearImplemented)
 	RegisterFeature("client_damage_tilt_configuring_implemented", ClientDamageTiltConfiguringImplemented)
 	RegisterFeature("debug_shape_entity_linking_implemented", DebugShapeEntityLinkingImplemented)
+	RegisterFeature("jwt_discontinued", JWTDiscontinued)
 }
