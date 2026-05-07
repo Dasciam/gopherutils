@@ -14,6 +14,11 @@ const (
 	// JWTDiscontinued is the protocol version where the old JWT authentication method has
 	// discontinued. (1.26.10)
 	JWTDiscontinued = Protocol1_26_10
+	// DebugShapeEntityLinkOriginChanged is the protocol version where the origin of debug shape
+	// entity linking was changed (1.26.10).
+	DebugShapeEntityLinkOriginChanged = Protocol1_26_10
+	// CustomDimensionsImplemented is the protocol version where custom dimensions were introduced (1.26.20).
+	CustomDimensionsImplemented = Protocol1_26_20
 )
 
 // featureMap maps feature string IDs to their implementation protocol version.
@@ -51,4 +56,6 @@ func init() {
 	RegisterFeature("client_damage_tilt_configuring_implemented", ClientDamageTiltConfiguringImplemented)
 	RegisterFeature("debug_shape_entity_linking_implemented", DebugShapeEntityLinkingImplemented)
 	RegisterFeature("jwt_discontinued", JWTDiscontinued)
+	RegisterFeature("debug_shape_entity_link_origin_changed", DebugShapeEntityLinkOriginChanged)
+	RegisterFeature("custom_dimensions_implemented", CustomDimensionsImplemented)
 }
