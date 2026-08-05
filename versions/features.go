@@ -19,6 +19,9 @@ const (
 	DebugShapeEntityLinkOriginChanged = Protocol1_26_10
 	// CustomDimensionsImplemented is the protocol version where custom dimensions were introduced (1.26.20).
 	CustomDimensionsImplemented = Protocol1_26_20
+	// NetherNetSupportImplemented is the protocol version where connecting to servers using the NetherNet
+	// protocol was implemented (1.26.40)
+	NetherNetSupportImplemented = Protocol1_26_40
 )
 
 // featureMap maps feature string IDs to their implementation protocol version.
@@ -58,4 +61,5 @@ func init() {
 	RegisterFeature("jwt_discontinued", JWTDiscontinued)
 	RegisterFeature("debug_shape_entity_link_origin_changed", DebugShapeEntityLinkOriginChanged)
 	RegisterFeature("custom_dimensions_implemented", CustomDimensionsImplemented)
+	RegisterFeature("nethernet_support_implemented", NetherNetSupportImplemented)
 }
