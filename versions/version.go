@@ -87,4 +87,6 @@ func init() {
 	Register(Protocol1_26_20, "1.26.20")
 	Register(Protocol1_26_30, "1.26.30")
 	Register(Protocol1_26_40, "1.26.40")
+	Register(Protocol1_26_45, "1.26.45")
+	Register(Protocol1_26_50, "1.26.50")
 }
