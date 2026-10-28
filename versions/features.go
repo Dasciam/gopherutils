@@ -20,8 +20,11 @@ const (
 	// CustomDimensionsImplemented is the protocol version where custom dimensions were introduced (1.26.20).
 	CustomDimensionsImplemented = Protocol1_26_20
 	// NetherNetSupportImplemented is the protocol version where connecting to servers using the NetherNet
-	// protocol was implemented (1.26.40)
+	// protocol through "Servers" tab was implemented (1.26.40)
 	NetherNetSupportImplemented = Protocol1_26_40
+	// DataDrivenVanillaBlocksMandatory is the protocol version where data-driven vanilla blocks are necessary to
+	// not break the vanilla block palette.
+	DataDrivenVanillaBlocksMandatory = Protocol1_26_50
 )
 
 // featureMap maps feature string IDs to their implementation protocol version.
@@ -62,4 +65,6 @@ func init() {
 	RegisterFeature("debug_shape_entity_link_origin_changed", DebugShapeEntityLinkOriginChanged)
 	RegisterFeature("custom_dimensions_implemented", CustomDimensionsImplemented)
 	RegisterFeature("nethernet_support_implemented", NetherNetSupportImplemented)
+	RegisterFeature("data_driven_vanilla_blocks_mandatory", DataDrivenVanillaBlocksMandatory)
+	// RakNet discontinuation: 1.26.70/1.26.60
 }
